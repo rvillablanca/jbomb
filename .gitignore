@@ -1,2 +1,7 @@
-/nbproject/private/
-/build/
+build/
+build.xml
+dist/
+liblwjgl64.so
+libopenal64.so
+manifest.mf
+nbproject/
