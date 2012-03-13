@@ -31,7 +31,7 @@ public class BaseBomb implements Bomb {
         sphere.setTextureMode(Sphere.TextureMode.Projected);
         geometry = new Geometry("bomb", sphere);
         Material material = new Material(JBombContext.ASSET_MANAGER, MatDefs.UNSHADED);
-        material.setTexture("ColorMap", JBombContext.ASSET_MANAGER.loadTexture("textures/bomb/" + fileName));
+        material.setTexture("ColorMap", JBombContext.ASSET_MANAGER.loadTexture("jbomb/assets/textures/bomb/" + fileName));
         geometry.setMaterial(material);
         ThrowBombControl tbc = new ThrowBombControl(mass);
         geometry.addControl(tbc);

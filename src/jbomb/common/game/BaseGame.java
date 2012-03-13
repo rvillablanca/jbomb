@@ -71,15 +71,15 @@ public abstract class BaseGame extends SimpleApplication {
     }
 
     private void initWalls() {
-        GeometryUtils.makePlane(40f, 40f, "north_glass", "textures/glass/sunbeam_t1.png", new Vector3f(-20f, 0f, -20f),
+        GeometryUtils.makePlane(40f, 40f, "north_glass", "jbomb/assets/textures/glass/sunbeam_t1.png", new Vector3f(-20f, 0f, -20f),
                 true);
-        GeometryUtils.makePlane(40f, 40f, "south_glass", "textures/glass/sunbeam_t1.png", new Vector3f(20f, 0f, 20f),
+        GeometryUtils.makePlane(40f, 40f, "south_glass", "jbomb/assets/textures/glass/sunbeam_t1.png", new Vector3f(20f, 0f, 20f),
                 new Quaternion().fromAngleAxis(FastMath.PI, Vector3f.UNIT_Y), true);
-        GeometryUtils.makePlane(40f, 40f, "west_glass", "textures/glass/sunbeam_t1.png", new Vector3f(-20f, 0f, 20f),
+        GeometryUtils.makePlane(40f, 40f, "west_glass", "jbomb/assets/textures/glass/sunbeam_t1.png", new Vector3f(-20f, 0f, 20f),
                 new Quaternion().fromAngleAxis(FastMath.PI / 2, Vector3f.UNIT_Y), true);
-        GeometryUtils.makePlane(40f, 40f, "east_glass", "textures/glass/sunbeam_t1.png", new Vector3f(20f, 0f, -20f),
+        GeometryUtils.makePlane(40f, 40f, "east_glass", "jbomb/assets/textures/glass/sunbeam_t1.png", new Vector3f(20f, 0f, -20f),
                 new Quaternion().fromAngleAxis(-FastMath.PI / 2, Vector3f.UNIT_Y), true);
-        GeometryUtils.makePlane(40f, 40f, "up_glass", "textures/glass/sunbeam_t1.png",
+        GeometryUtils.makePlane(40f, 40f, "up_glass", "jbomb/assets/textures/glass/sunbeam_t1.png",
                 new Vector3f(-20f, 40f, -20f), new Quaternion().fromAngleAxis(FastMath.PI / 2, Vector3f.UNIT_X), true);
 
         makeWallsAtBase();
@@ -106,10 +106,10 @@ public abstract class BaseGame extends SimpleApplication {
     }
 
     public void makeWallsAtThirdPlatform() {
-        String orange1 = "textures/boxes/w_orange1.png",
-                orange2 = "textures/boxes/w_orange2.png",
-                darkgray = "textures/boxes/w_darkgray.png",
-                glass = "textures/glass/sunbeam_t2.png";
+        String orange1 = "jbomb/assets/textures/boxes/w_orange1.png",
+                orange2 = "jbomb/assets/textures/boxes/w_orange2.png",
+                darkgray = "jbomb/assets/textures/boxes/w_darkgray.png",
+                glass = "jbomb/assets/textures/glass/sunbeam_t2.png";
 
         GeometryUtils.makeCube(.5f, .25f, 1f, "13th_wall", darkgray, new Vector3f(15.5f, 29.75f, 1f), new Vector2f(1f, .5f));
         GeometryUtils.makeCube(.5f, .25f, 1f, "13th_wall", darkgray, new Vector3f(15.5f, 29.75f, 5f), new Vector2f(1f, .5f));
@@ -303,10 +303,10 @@ public abstract class BaseGame extends SimpleApplication {
     }
 
     public void makeWallsAtSecondPlatform() {
-        String pink = "textures/boxes/w_pink.png",
-                purple = "textures/boxes/w_purple.png",
-                darkgray = "textures/boxes/w_darkgray.png",
-                glass = "textures/glass/sunbeam_t2.png";
+        String pink = "jbomb/assets/textures/boxes/w_pink.png",
+                purple = "jbomb/assets/textures/boxes/w_purple.png",
+                darkgray = "jbomb/assets/textures/boxes/w_darkgray.png",
+                glass = "jbomb/assets/textures/glass/sunbeam_t2.png";
 
         GeometryUtils.makeCube(.5f, 1.5f, .5f, "2nd_platformPilar", darkgray, new Vector3f(4.5f, 21.5f, 4.5f), new Vector2f(.5f, 1.5f));
         GeometryUtils.makeCube(.5f, .5f, .5f, "2nd_platformPilar", darkgray, new Vector3f(4.5f, 20.5f, 3.5f), new Vector2f(.5f, .5f));
@@ -476,7 +476,7 @@ public abstract class BaseGame extends SimpleApplication {
     }
 
     public void makeWallsAtFirstPlatform() {
-        String boxTextures = "textures/boxes/", glass = "textures/glass/sunbeam_t2.png", basePilars = boxTextures + "w_darkgray.png";
+        String boxTextures = "jbomb/assets/textures/boxes/", glass = "jbomb/assets/textures/glass/sunbeam_t2.png", basePilars = boxTextures + "w_darkgray.png";
         GeometryUtils.makeCube(.5f, .5f, .5f, "1st_wall", boxTextures + "w_blue2.png", new Vector3f(15.5f, 10.5f, 7.5f), new Vector2f(.5f, .5f));
         GeometryUtils.makeCube(.5f, 1f, 2f, "1st_wall", boxTextures + "w_blue2.png", new Vector3f(15.5f, 11f, 5f), new Vector2f(2f, 1f));
         GeometryUtils.makeCube(.5f, .5f, 1f, "1st_wall", boxTextures + "w_blue2.png", new Vector3f(15.5f, 12.5f, 6f), new Vector2f(1f, .5f));
@@ -629,11 +629,11 @@ public abstract class BaseGame extends SimpleApplication {
     }
 
     public void makeWallsAtBase() {
-        String basePilars = "textures/boxes/w_darkgray.png",
-                red = "textures/boxes/w_red2.png",
-                green1 = "textures/boxes/w_green1.png",
-                green2 = "textures/boxes/w_green2.png",
-                green3 = "textures/boxes/w_green3.png";
+        String basePilars = "jbomb/assets/textures/boxes/w_darkgray.png",
+                red = "jbomb/assets/textures/boxes/w_red2.png",
+                green1 = "jbomb/assets/textures/boxes/w_green1.png",
+                green2 = "jbomb/assets/textures/boxes/w_green2.png",
+                green3 = "jbomb/assets/textures/boxes/w_green3.png";
 
         GeometryUtils.makeCube(.5f, 4.5f, .5f, "basePilar", basePilars, new Vector3f(4.5f, 5.5f, 4.5f), new Vector2f(-.5f, 4.5f));
         GeometryUtils.makeCube(.5f, 4.5f, .5f, "basePilar", basePilars, new Vector3f(4.5f, 5.5f, -4.5f), new Vector2f(-.5f, 4.5f));
@@ -781,13 +781,13 @@ public abstract class BaseGame extends SimpleApplication {
 
     private void initFloor() {
         GeometryUtils.makePlane(
-                40f, 40f, "floor", "textures/boxes/f_gray.png", new Vector3f(-20f, 0f, 20f),
+                40f, 40f, "floor", "jbomb/assets/textures/boxes/f_gray.png", new Vector3f(-20f, 0f, 20f),
                 new Quaternion().fromAngleAxis(-FastMath.PI / 2, Vector3f.UNIT_X), new Vector2f(20f, 20f), true);
     }
 
     private void makeFirtPlatform() {
         float height = 9.9f;
-        String texture = "textures/boxes/f_blue.png", name = "firstPlatform";
+        String texture = "jbomb/assets/textures/boxes/f_blue.png", name = "firstPlatform";
 
         GeometryUtils.makeCube(
                 4f, 0.1f, 4f, name, texture, new Vector3f(0f, height, 0f), new Vector2f(4f, 4f), true);
@@ -807,7 +807,7 @@ public abstract class BaseGame extends SimpleApplication {
 
     private void makeSecondPlatform() {
         float height = 19.9f;
-        String texture = "textures/boxes/f_purple.png", name = "secondPlatform";
+        String texture = "jbomb/assets/textures/boxes/f_purple.png", name = "secondPlatform";
 
         GeometryUtils.makeCube(
                 4f, 0.1f, 4f, name, texture, new Vector3f(0f, height, 0f), new Vector2f(4f, 4f), true);
@@ -839,7 +839,7 @@ public abstract class BaseGame extends SimpleApplication {
 
     private void makeThirdPlatform() {
         float height = 29.9f;
-        String texture = "textures/boxes/f_orange.png", name = "thirdPlatform";
+        String texture = "jbomb/assets/textures/boxes/f_orange.png", name = "thirdPlatform";
 
         GeometryUtils.makeCube(
                 4f, 0.1f, 2f, name, texture, new Vector3f(0f, height, 0f), new Vector2f(2f, 4f), true);
@@ -874,7 +874,7 @@ public abstract class BaseGame extends SimpleApplication {
     }
 
     private void initSky() {
-        String basePath = "textures/sky/space2/";
+        String basePath = "jbomb/assets/textures/sky/space2/";
         Texture west = assetManager.loadTexture(basePath + "west.png");
         Texture east = assetManager.loadTexture(basePath + "east.png");
         Texture north = assetManager.loadTexture(basePath + "north.png");

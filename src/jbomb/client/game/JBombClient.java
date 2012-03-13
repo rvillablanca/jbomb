@@ -111,7 +111,7 @@ public class JBombClient extends BaseGame {
 
     public void initGuiCounter() {
         guiNode.detachAllChildren();
-        counterPicture.setImage(assetManager, "interfaces/pictures/ready3.png", true);
+        counterPicture.setImage(assetManager, "jbomb/assets/interfaces/pictures/ready3.png", true);
         counterPicture.setWidth(128f);
         counterPicture.setHeight(128f);
         counterPicture.setLocalTranslation(settings.getWidth() / 2 - 64f, settings.getHeight() / 2 - 64f, 0f);
@@ -119,7 +119,7 @@ public class JBombClient extends BaseGame {
     }
 
     public void changeCounter(byte num) {
-        counterPicture.setImage(assetManager, "interfaces/pictures/ready" + num + ".png", true);
+        counterPicture.setImage(assetManager, "jbomb/assets/interfaces/pictures/ready" + num + ".png", true);
     }
 
     public void initInterfaces() {
@@ -142,7 +142,7 @@ public class JBombClient extends BaseGame {
                 int id = ClientContext.PLAYER.getIdUserData();
                 health.put(id, new BitmapText(guiFont, false));
                 picture = new Picture("HealthPlayer" + id);
-                picture.setImage(assetManager, "interfaces/pictures/" + (id + 1) + ".png", true);
+                picture.setImage(assetManager, "jbomb/assets/interfaces/pictures/" + (id + 1) + ".png", true);
                 picture.setWidth(32f);
                 picture.setHeight(32f);
                 picture.setLocalTranslation(settings.getWidth() - 32f - 5f, 130f + up, 0f);
@@ -163,7 +163,7 @@ public class JBombClient extends BaseGame {
                     if (i == id)
                         continue;
                     picture = new Picture("HealthPlayer" + i);
-                    picture.setImage(assetManager, "interfaces/pictures/" + (i + 1) + ".png", true);
+                    picture.setImage(assetManager, "jbomb/assets/interfaces/pictures/" + (i + 1) + ".png", true);
                     picture.setWidth(32f);
                     picture.setHeight(32f);
                     picture.setLocalTranslation(settings.getWidth() - 32f - 5f, 130f + up, 0f);
@@ -323,21 +323,21 @@ public class JBombClient extends BaseGame {
     }
     
     private void initPictures() {
-        looser.setImage(assetManager, "interfaces/pictures/looser.png", true);
+        looser.setImage(assetManager, "jbomb/assets/interfaces/pictures/looser.png", true);
         looser.addControl(new WinnerLooserControl());
         looser.setWidth(324f);
         looser.setHeight(594f);
         looser.setLocalTranslation(settings.getWidth() / 2 - 162f, settings.getHeight() / 2 - 247f, 0f);
-        winner.setImage(assetManager, "interfaces/pictures/winner.png", true);
+        winner.setImage(assetManager, "jbomb/assets/interfaces/pictures/winner.png", true);
         winner.addControl(new WinnerLooserControl());
         winner.setWidth(512f);
         winner.setHeight(512f);
         winner.setLocalTranslation(settings.getWidth() / 2 - 256f, settings.getHeight() / 2 - 256f, 0f);
-        getBombsPictures().setImage(assetManager, "interfaces/pictures/bomb1.png", true);
+        getBombsPictures().setImage(assetManager, "jbomb/assets/interfaces/pictures/bomb1.png", true);
         getBombsPictures().setWidth(64f);
         getBombsPictures().setHeight(51f);
         getBombsPictures().setLocalTranslation(settings.getWidth() - 64f - 5f, 0f, 0f);
-        getBombsSecondsPictures().setImage(assetManager, "interfaces/pictures/glass_numbers_1.png", true);
+        getBombsSecondsPictures().setImage(assetManager, "jbomb/assets/interfaces/pictures/glass_numbers_1.png", true);
         getBombsSecondsPictures().setWidth(45f);
         getBombsSecondsPictures().setHeight(45f);
         getBombsSecondsPictures().setLocalTranslation(settings.getWidth() - 45 - 5f, 55f, 0f);

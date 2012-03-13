@@ -23,7 +23,7 @@ public class BaseExplosion implements Explosion {
         baseControlExplosion.setExplosion(this);
         emitter = new ParticleEmitter(name, ParticleMesh.Type.Triangle, numParticles);
         Material m = new Material(JBombContext.ASSET_MANAGER, MatDefs.PARTICLE);
-        m.setTexture("Texture", JBombContext.ASSET_MANAGER.loadTexture("textures/explosion/" + fileName));
+        m.setTexture("Texture", JBombContext.ASSET_MANAGER.loadTexture("jbomb/assets/textures/explosion/" + fileName));
         emitter.setMaterial(m);
         emitter.addControl(control);
         this.x = x;

@@ -33,6 +33,6 @@ public class BombSecondsListener implements ActionListener {
     
     private void changeImage(int value) {
         ClientContext.APP.getBombsSecondsPictures().setImage(JBombContext.ASSET_MANAGER, 
-                "interfaces/pictures/glass_numbers_" + value + ".png", true);
+                "jbomb/assets/interfaces/pictures/glass_numbers_" + value + ".png", true);
     }
 }

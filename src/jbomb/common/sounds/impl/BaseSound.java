@@ -13,7 +13,7 @@ public class BaseSound implements Sound {
     
     public BaseSound(String fileName, Type type, boolean buffer, float volume) {
         audioNode = new AudioNode(JBombContext.ASSET_MANAGER, 
-                (type == Type.INSTANCE ? "sounds/instance/" : "sounds/background/") + fileName, 
+                (type == Type.INSTANCE ? "jbomb/assets/sounds/instance/" : "jbomb/assets/sounds/background/") + fileName, 
                 buffer);
         audioNode.setVolume(volume);
         this.type = type;

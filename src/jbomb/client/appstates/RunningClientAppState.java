@@ -102,6 +102,6 @@ public class RunningClientAppState extends RunningAppState {
                 bombsCount++;
             }
         }
-        ClientContext.APP.getBombsPictures().setImage(JBombContext.ASSET_MANAGER, "interfaces/pictures/bomb" + bombsCount + ".png", true);
+        ClientContext.APP.getBombsPictures().setImage(JBombContext.ASSET_MANAGER, "jbomb/assets/interfaces/pictures/bomb" + bombsCount + ".png", true);
     }
 }

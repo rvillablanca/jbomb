@@ -37,7 +37,7 @@ public class Elevator {
     }
 
     public Elevator(Vector3f localTraslation, float upY, float downY, float freezedSeconds, boolean up, boolean serverControlled) {
-        this("elevator", "textures/boxes/w_darkgray.png", localTraslation, upY, downY, freezedSeconds, up, serverControlled);
+        this("elevator", "jbomb/assets/textures/boxes/w_darkgray.png", localTraslation, upY, downY, freezedSeconds, up, serverControlled);
     }
 
     public Geometry getGeometry() {
