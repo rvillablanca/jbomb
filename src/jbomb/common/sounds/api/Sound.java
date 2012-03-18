@@ -7,4 +7,6 @@ public interface Sound {
     void play(Vector3f location);
     
     void setEnabled(boolean enabled);
+    
+    void stop();
 }

@@ -24,6 +24,7 @@ public class DeadPlayerTask implements Task<DeadPlayerMessage> {
             ClientContext.APP.removeListeners();
             ClientContext.APP.cleanScreenBombs();
             ClientContext.APP.youAreLooser();
+            ClientContext.APP.getBackgroundSound().stop();
         } else {
             LOGGER.debug("Jugador #" + message.getId() + " perdió");
             Player player = (Player) JBombContext.MANAGER.removePhysicObject(message.getId());

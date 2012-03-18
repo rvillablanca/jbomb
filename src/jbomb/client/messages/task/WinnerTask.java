@@ -23,5 +23,6 @@ public class WinnerTask implements Task<WinnerMessage> {
             Player player = (Player) JBombContext.MANAGER.removePhysicObject(message.getId());
             JBombContext.ROOT_NODE.detachChild(player.getGeometry());
         }
+        ClientContext.APP.getBackgroundSound().stop();
     }
 }

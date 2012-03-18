@@ -27,6 +27,8 @@ import jbomb.common.game.BaseGame;
 import jbomb.common.game.JBombContext;
 import jbomb.common.game.Player;
 import jbomb.common.messages.*;
+import jbomb.common.sounds.api.Sound;
+import jbomb.common.sounds.impl.BackgroundSound;
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
@@ -49,6 +51,7 @@ public class JBombClient extends BaseGame {
     private boolean right;
     private boolean front;
     private boolean back;
+    private Sound backgroundSound;
     
     private ShootsActionListener shootsActionListener = new ShootsActionListener();
     private CharacterActionListener characterActionListener = new CharacterActionListener();
@@ -104,6 +107,7 @@ public class JBombClient extends BaseGame {
             LOGGER.error("Error al conectar con el servidor", ex);
         }
         guiNode.detachAllChildren();
+        backgroundSound = new BackgroundSound("background.ogg", 5f);
         initPictures();
         ClientContext.APP = this;
         ClientContext.CLIENT = client;
@@ -391,5 +395,9 @@ public class JBombClient extends BaseGame {
     
     public void waitMoment() {
         guiNode.attachChild(wait);
+    }
+
+    public Sound getBackgroundSound() {
+        return backgroundSound;
     }
 }

@@ -38,6 +38,11 @@ public class BaseSound implements Sound {
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
+
+    @Override
+    public void stop() {
+        audioNode.stop();
+    }
     
     public enum Type {
         BACKGROUND, INSTANCE

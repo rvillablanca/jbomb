@@ -1,5 +1,6 @@
 package jbomb.client.messages.task;
 
+import com.jme3.math.Vector3f;
 import jbomb.client.game.ClientContext;
 import jbomb.common.messages.CounterMessage;
 import org.apache.log4j.Logger;
@@ -15,5 +16,7 @@ public class CounterTask implements Task<CounterMessage> {
             ClientContext.APP.initGuiCounter();
         else
             ClientContext.APP.changeCounter(message.getNum());
+        if (message.getNum() == 1)
+            ClientContext.APP.getBackgroundSound().play(Vector3f.ZERO);
     }
 }
