@@ -12,11 +12,10 @@ public class CounterTask implements Task<CounterMessage> {
     @Override
     public void doThis(CounterMessage message) {
         LOGGER.debug("¿Listo?: " + message.getNum());
-        if (message.getNum() == 3)
+        if (message.getNum() == 3) {
             ClientContext.APP.initGuiCounter();
-        else
-            ClientContext.APP.changeCounter(message.getNum());
-        if (message.getNum() == 1)
             ClientContext.APP.getBackgroundSound().play(Vector3f.ZERO);
+        } else
+            ClientContext.APP.changeCounter(message.getNum());
     }
 }

@@ -6,13 +6,13 @@ import com.jme3.scene.control.Control;
 import jbomb.client.game.ClientContext;
 import jbomb.common.controls.JBombAbstractControl;
 
-public class WinnerLooserControl extends JBombAbstractControl {
+public class WinnerLoserControl extends JBombAbstractControl {
     
     private float time, maxTime = 7f;
 
     @Override
     protected Control newInstanceOfMe() {
-        return new WinnerLooserControl();
+        return new WinnerLoserControl();
     }
 
     @Override

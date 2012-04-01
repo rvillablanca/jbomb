@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.concurrent.Callable;
 import jbomb.client.appstates.ClientManager;
 import jbomb.client.appstates.RunningClientAppState;
-import jbomb.client.controls.WinnerLooserControl;
+import jbomb.client.controls.WinnerLoserControl;
 import jbomb.client.listeners.BombSecondsListener;
 import jbomb.client.listeners.CharacterActionListener;
 import jbomb.client.listeners.ServerConnectionListener;
@@ -328,12 +328,12 @@ public class JBombClient extends BaseGame {
     
     private void initPictures() {
         looser.setImage(assetManager, "jbomb/assets/interfaces/pictures/looser.png", true);
-        looser.addControl(new WinnerLooserControl());
+        looser.addControl(new WinnerLoserControl());
         looser.setWidth(324f);
         looser.setHeight(594f);
         looser.setLocalTranslation(settings.getWidth() / 2 - 162f, settings.getHeight() / 2 - 247f, 0f);
         winner.setImage(assetManager, "jbomb/assets/interfaces/pictures/winner.png", true);
-        winner.addControl(new WinnerLooserControl());
+        winner.addControl(new WinnerLoserControl());
         winner.setWidth(512f);
         winner.setHeight(512f);
         winner.setLocalTranslation(settings.getWidth() / 2 - 256f, settings.getHeight() / 2 - 256f, 0f);
