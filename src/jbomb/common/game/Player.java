@@ -101,6 +101,6 @@ public class Player {
     }
     
     public int getIdUserData() {
-        return geometry.getUserData("id");
+        return (Integer) geometry.getUserData("id");
     }
 }
