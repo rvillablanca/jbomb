@@ -7,8 +7,6 @@ import com.jme3.math.Quaternion;
 import com.jme3.math.Vector2f;
 import com.jme3.math.Vector3f;
 import com.jme3.network.serializing.Serializer;
-//import com.jme3.post.FilterPostProcessor;
-//import com.jme3.post.filters.CartoonEdgeFilter;
 import com.jme3.scene.Node;
 import com.jme3.scene.Spatial;
 import com.jme3.scene.control.Control;
@@ -16,6 +14,8 @@ import com.jme3.system.AppSettings;
 import com.jme3.texture.Texture;
 import com.jme3.util.SkyFactory;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import jbomb.common.appstates.AbstractManager;
 import jbomb.common.messages.*;
 import jbomb.common.scene.Elevator;
@@ -42,6 +42,7 @@ public abstract class BaseGame extends SimpleApplication {
 //    }
     
     private void initAppSettings() {
+        Logger.getLogger("").setLevel(Level.SEVERE);
         appSettings.setResolution(640, 480);
         appSettings.setTitle("jBomb");
         setSettings(appSettings);
